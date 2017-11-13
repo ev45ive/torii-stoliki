@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'restaurants-list',
@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class RestaurantsListComponent implements OnInit {
+
+  @Input('list')
+  restaurants
 
   constructor() { }
 

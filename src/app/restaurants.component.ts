@@ -5,7 +5,8 @@ import { HttpClient } from "@angular/common/http";
   selector: 'restaurants',
   template: `
     <p>restaurants works!</p>
-    <restaurants-list></restaurants-list>
+
+    <restaurants-list [list]="restaurants"></restaurants-list>
   `,
   styles: []
 })
