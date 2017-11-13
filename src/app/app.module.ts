@@ -10,6 +10,7 @@ import { RestaurantsComponent } from './restaurants.component';
 import { HomeComponent } from './home.component';
 import { RestaurantsListComponent } from './views/restaurants-list.component';
 import { RestaurantsService } from "./services/restaurants.service";
+import { RestaurantItemComponent } from './views/restaurant-item.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RestaurantsService } from "./services/restaurants.service";
     AppComponent,
     RestaurantsComponent,
     HomeComponent,
-    RestaurantsListComponent
+    RestaurantsListComponent,
+    RestaurantItemComponent
   ],
   imports: [
     BrowserModule,

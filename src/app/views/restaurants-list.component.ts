@@ -3,7 +3,9 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'restaurants-list',
   template: `
-    <div *ngFor="let restaurant of restaurants">{{restaurant.name}}</div>
+    <div *ngFor="let item of restaurants">
+      <restaurant-item [restaurant]="item"></restaurant-item>
+    </div>
   `,
   styles: []
 })
