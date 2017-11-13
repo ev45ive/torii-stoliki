@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
 @Component({
-  selector: 'app-restaurants',
+  selector: 'restaurants',
   template: `
     <p>restaurants works!</p>
-    <div *ngFor="let restaurant of restaurants">{{restaurant.name}}</div>
+    <restaurants-list></restaurants-list>
   `,
   styles: []
 })
