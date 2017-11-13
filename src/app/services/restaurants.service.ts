@@ -8,11 +8,15 @@ export class RestaurantsService {
 
   restaurants
 
-  fetchRestaurants(){
-    this.http.get('http://localhost:3000/restaurants')
+  fetchRestaurants(query=''){
+    this.http.get('http://localhost:3000/restaurants?q='+query)
       .subscribe(restaurants => {
           this.restaurants = restaurants
       })
+  }
+
+  fetchRestaurant(id){
+    return this.http.get('http://localhost:3000/restaurants/' + id) 
   }
 
 }
