@@ -9,6 +9,7 @@ import { Routing } from "./app.routing";
 import { RestaurantsComponent } from './restaurants.component';
 import { HomeComponent } from './home.component';
 import { RestaurantsListComponent } from './views/restaurants-list.component';
+import { RestaurantsService } from "./services/restaurants.service";
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { RestaurantsListComponent } from './views/restaurants-list.component';
     HttpClientModule,
     Routing
   ],
-  providers: [],
+  providers: [
+    RestaurantsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

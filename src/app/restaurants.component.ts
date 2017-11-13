@@ -1,30 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { RestaurantsService } from "./services/restaurants.service";
 
 @Component({
   selector: 'restaurants',
   template: `
     <p>restaurants works!</p>
 
-    <restaurants-list [list]="restaurants"></restaurants-list>
+    <restaurants-list [list]="restaurantsService.restaurants"></restaurants-list>
   `,
   styles: []
 })
 export class RestaurantsComponent implements OnInit {
 
-  restaurants
 
-  constructor(private http:HttpClient) { }
+  constructor(
+    public restaurantsService:RestaurantsService
+  ) { }
 
-  fetchRestaurants(){
-    this.http.get('http://localhost:3000/restaurants')
-      .subscribe(restaurants => {
-          this.restaurants = restaurants
-      })
-  }
-
+ 
   ngOnInit() {
-    this.fetchRestaurants()
+    this.restaurantsService.fetchRestaurants()
   }
 
 }
